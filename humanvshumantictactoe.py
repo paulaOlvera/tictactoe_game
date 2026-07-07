@@ -3,12 +3,15 @@
 class Board: 
     def __init__(self):
         # Initialize the board in blank
-        self.cells = [['','',''],['','',''],['','','']]
+        self.cells = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
     def display(self):
         # Displays the board
-        for row in self.cells:
-            print(row)
+        print("    0    1    2  ")
+        # for row in self.cells:
+        for i in range(3):
+            print(f"{i} {self.cells[i]}")
+            
 
     def place_mark(self,row, col,mark):
         self.cells[row][col]=mark
